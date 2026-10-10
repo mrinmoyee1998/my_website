@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e23744">
+<title>Mrinmoyee Das | Business Analyst</title>
+<style>
+:root{--red:#e23744;--red-dark:#cb202d;--ink:#1c1c1c;--muted:#696969;--line:#e8e8e8;--soft:#f8f8f8;--pink:#fff0f1;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}a:hover{text-decoration:none}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid #f0f0f0;backdrop-filter:blur(10px);padding:12px clamp(18px,5vw,72px);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-size:29px;letter-spacing:-1.6px;font-weight:800;color:var(--red);line-height:1}
+.brand small{display:block;font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:#555;font-weight:700;margin-top:4px}
+nav{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+nav a{font-size:13px;color:#444;padding:8px 11px;border-radius:20px}
+nav a:hover{background:var(--pink);color:var(--red)}
+.hero{min-height:390px;padding:60px 20px 48px;text-align:center;background:linear-gradient(180deg,#fff7f7 0%,#fff 90%);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.kicker{color:var(--red);text-transform:uppercase;font-size:11px;letter-spacing:2px;font-weight:700}
+h1{font-size:clamp(38px,6vw,58px);line-height:1.1;letter-spacing:-2px;margin:12px 0 10px;font-weight:750}
+.role{font-size:clamp(16px,2.5vw,20px);color:#444;margin:0}
+.location{font-size:14px;color:var(--muted);margin:8px 0 22px}
+.search{display:flex;align-items:center;gap:12px;width:min(650px,95vw);padding:13px 16px;border:1px solid #e3e3e3;border-radius:10px;background:#fff;box-shadow:0 4px 20px #0000000b;text-align:left}
+.search:focus-within{border-color:#e9a0a5;box-shadow:0 4px 22px #e237441a}
+.search input{border:0;outline:0;width:100%;font:inherit;font-size:14px;background:transparent}
+.search svg{flex-shrink:0;color:var(--red)}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:7px;padding:10px 16px;font-size:14px;font-weight:600;border:1px solid #ddd;background:#fff}
+.btn.primary{background:var(--red);border-color:var(--red);color:#fff}
+.btn:hover{box-shadow:0 3px 12px #00000012;transform:translateY(-1px)}
+main{width:min(1040px,calc(100% - 36px));margin:0 auto 64px}
+.section{padding:36px 0;border-bottom:1px solid #f0f0f0}
+.heading{display:flex;align-items:center;gap:11px;margin:0 0 20px;font-size:25px;letter-spacing:-.5px}
+.heading:before{content:"";width:5px;height:28px;border-radius:5px;background:var(--red)}
+.intro{font-size:15px;color:#444;max-width:850px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:12px;padding:19px;background:#fff;transition:box-shadow .18s,transform .18s}
+.card:hover{box-shadow:0 8px 24px #0000000b;transform:translateY(-2px)}
+.card h3{font-size:16px;margin:0 0 5px;line-height:1.4}
+.meta{color:var(--muted);font-size:13px;margin:0 0 9px}
+.card p:last-child{margin-bottom:0}
+.timeline{display:grid;gap:0}
+.job{display:grid;grid-template-columns:20px 1fr;gap:13px}
+.rail{position:relative;display:flex;justify-content:center}
+.rail:before{content:"";position:absolute;top:12px;bottom:-2px;width:2px;background:#f0c8cb}
+.job:last-child .rail:before{display:none}
+.rail:after{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);border:3px solid #ffe5e7;position:relative;z-index:1;margin-top:5px}
+.jobcontent{padding-bottom:20px}
+.jobcontent h3{font-size:16px;margin:0;font-weight:700}
+.company{margin:2px 0 3px;color:#3c3c3c}
+.jobcontent .meta{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tag{border-radius:7px;padding:7px 11px;background:#fff4f4;border:1px solid #ffe0e2;color:#9c2730;font-size:13px}
+.tag.neutral{background:#f8f8f8;border-color:#ededed;color:#444}
+.edu{display:grid;gap:12px}
+.eduitem{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:11px;padding:15px}
+.eduicon{flex:0 0 40px;height:40px;display:grid;place-items:center;border-radius:9px;background:var(--pink);color:var(--red);font-size:12px;font-weight:800}
+.eduitem h3{font-size:15px;margin:0 0 3px}
+.eduitem p{font-size:13px;color:var(--muted);margin:0}
+.contactgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.contact{display:flex;gap:12px;align-items:center;padding:15px;border:1px solid var(--line);border-radius:10px;overflow-wrap:anywhere}
+.contact:hover{border-color:#efb4b8;background:#fffafa}
+.contacticon{width:35px;height:35px;flex:0 0 35px;display:grid;place-items:center;border-radius:50%;background:var(--pink);color:var(--red);font-weight:800}
+.contact small{display:block;color:var(--muted);font-size:12px}
+footer{padding:25px 18px;text-align:center;background:#fafafa;color:#777;font-size:12px}
+.top{position:fixed;bottom:18px;right:18px;border:0;border-radius:50%;height:42px;width:42px;background:var(--red);color:#fff;font-size:20px;box-shadow:0 4px 14px #e2374438;cursor:pointer}
+.hidden{display:none!important}
+@media(max-width:680px){.topbar{align-items:flex-start;flex-direction:column;gap:8px}nav{justify-content:flex-start}nav a{padding:6px 8px}.hero{padding-top:46px;min-height:360px}.grid,.contactgrid{grid-template-columns:1fr}.section{padding:28px 0}.heading{font-size:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="Mrinmoyee Das home">zomato<small>PERSONAL PROFILE</small></a>
+  <nav aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="kicker">A little about me</div>
+  <h1>Mrinmoyee Das</h1>
+  <p class="role">Business Analyst @ U GRO Capital · MBA in Marketing</p>
+  <p class="location">Mumbai, Maharashtra, India</p>
+  <form class="search" id="searchForm" role="search">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <input id="searchInput" type="search" placeholder="Search skills, experience, education..." aria-label="Search this page">
+    <span style="font-size:12px;color:#999" aria-hidden="true">Enter</span>
+  </form>
+  <div class="actions"><a class="btn primary" href="#experience">Explore my journey ↓</a><a class="btn" href="https://www.linkedin.com/in/mrinmoyeedas98" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div>
+</section>
+
+<main>
+  <section class="section searchable" id="about" data-search="about summary profile business analyst ugro capital msme lending ai technology netcracker stakeholder requirements">
+    <h2 class="heading">About me</h2>
+    <p class="intro">I’m Mrinmoyee, currently working at U GRO Capital, an MSME-focused lending company, where I focus on making the lending journey easier and less risky through AI and technology. Before that, I was working at Netcracker Technology.</p>
+    <p class="intro">As a business analyst, I bring a diverse skill set encompassing requirement gathering, stakeholder management, relationship building, client interaction, negotiation, configuration, collaboration with cross-functional teams, SDLC, user story creation, Scrum and Agile methodologies, user acceptance testing, documentation, wireframing, time management, communication and problem-solving.</p>
+    <p class="intro">I strongly believe in learning new things, taking up challenges, exploring and never restricting yourself to one thing.</p>
+  </section>
+
+  <section class="section searchable" id="experience" data-search="experience career employment business analyst market research intern placement coordinator corporate project studies coordinator">
+    <h2 class="heading">Where I’ve worked</h2>
+    <div class="timeline">
+      <article class="job"><div class="rail"></div><div class="jobcontent"><h3>Business Analyst</h3><p class="company">U GRO Capital</p><p class="meta">June 2024 – Present · Mumbai, Maharashtra, India</p></div></article>
+      <article class="job"><div class="rail"></div><div class="jobcontent"><h3>Business Analyst</h3><p class="company">Netcracker Technology</p><p class="meta">September 2022 – March 2024</p></div></article>
+      <article class="job"><div class="rail"></div><div class="jobcontent"><h3>Business Analyst</h3><p class="company">e-Zest Solutions</p><p class="meta">December 2021 – June 2022 · Pune/Pimpri-Chinchwad Area</p></div></article>
+      <article class="job"><div class="rail"></div><div class="jobcontent"><h3>Corporate Relations Team Placement Coordinator</h3><p class="company">Balaji Institute of Telecom and Management, Sri Balaji Society, Pune</p><p class="meta">July 2021 – December 2021 · Pune Division, Maharashtra, India</p></div></article>
+      <article class="job"><div class="rail"></div><div class="jobcontent"><h3>Market Research Intern</h3><p class="company">TESCOM Business Solutions</p><p class="meta">May 2021 – September 2021 · Mumbai, Maharashtra, India</p></div></article>
+      <article class="job"><div class="rail"></div><div class="jobcontent"><h3>Market Research Intern</h3><p class="company">DAccess IT Infra Pvt. Ltd.</p><p class="meta">May 2021 – July 2021 · Pune Division, Maharashtra, India</p></div></article>
+      <article class="job"><div class="rail"></div><div class="jobcontent"><h3>Corporate Project Studies Co-ordinator</h3><p class="company">Sri Balaji University, Pune</p><p class="meta">January 2021 – July 2021</p></div></article>
+    </div>
+  </section>
+
+  <section class="section searchable" id="skills" data-search="skills tools technologies mysql postman figma draw.io jira business requirements product road mapping wireframing requirement gathering business analysis data analysis collaboration">
+    <h2 class="heading">Skills & tools</h2>
+    <h3 style="font-size:15px;margin:0 0 12px">What I bring</h3>
+    <div class="tags" style="margin-bottom:23px"><span class="tag">Business Requirements</span><span class="tag">Product Road Mapping</span><span class="tag">Wireframing</span><span class="tag neutral">Requirement Gathering</span><span class="tag neutral">Business Analysis</span><span class="tag neutral">Data Analysis</span><span class="tag neutral">Collaboration</span><span class="tag neutral">Stakeholder Management</span><span class="tag neutral">User Stories</span><span class="tag neutral">SDLC</span><span class="tag neutral">Scrum & Agile</span><span class="tag neutral">User Acceptance Testing</span><span class="tag neutral">Documentation</span><span class="tag neutral">Problem-solving</span></div>
+    <h3 style="font-size:15px;margin:0 0 12px">Tools & technologies</h3>
+    <div class="tags"><span class="tag neutral">MySQL</span><span class="tag neutral">Postman</span><span class="tag neutral">Figma</span><span class="tag neutral">Draw.io</span><span class="tag neutral">JIRA</span></div>
+  </section>
+
+  <section class="section searchable" id="education" data-search="education mba marketing bca science school">
+    <h2 class="heading">Education</h2>
+    <div class="edu">
+      <article class="eduitem"><div class="eduicon">MBA</div><div><h3>Balaji Institute of Telecom and Management, Sri Balaji Society, Pune</h3><p>Master of Business Administration (MBA), Marketing · 2020–2022</p></div></article>
+      <article class="eduitem"><div class="eduicon">BCA</div><div><h3>Gauhati University, Guwahati</h3><p>BCA · August 2017–January 2020</p></div></article>
+      <article class="eduitem"><div class="eduicon">12</div><div><h3>Tarabushan Pal Junior College of Science</h3><p>Science · 2015–2017</p></div></article>
+      <article class="eduitem"><div class="eduicon">10</div><div><h3>Rowlands Memorial High School</h3><p>2015</p></div></article>
+    </div>
+  </section>
+
+  <section class="section searchable" id="certifications" data-search="certifications digital marketing agile foundations excel advanced formulas functions business intelligence power bi data analytics">
+    <h2 class="heading">Certifications & learning</h2>
+    <div class="grid">
+      <article class="card"><h3>Fundamentals of Digital Marketing</h3><p class="meta">Certification</p></article>
+      <article class="card"><h3>Agile Foundations</h3><p class="meta">Certification</p></article>
+      <article class="card"><h3>Excel: Advanced Formulas and Functions</h3><p class="meta">Excel skills</p></article>
+      <article class="card"><h3>Excel: Mother of Business Intelligence</h3><p class="meta">Excel & business intelligence</p></article>
+      <article class="card"><h3>Get Job Ready: Power BI Data Analytics for All Levels 2.0</h3><p class="meta">Data analytics learning</p></article>
+    </div>
+  </section>
+
+  <section class="section searchable" id="projects" data-search="projects github upskilling personal projects">
+    <h2 class="heading">Projects I’ve explored</h2>
+    <div class="card"><h3>Projects from my upskilling journey</h3><p class="meta">Explore projects and practice work on GitHub.</p><a style="color:var(--red);font-weight:700" href="https://github.com/mrinmoyee1998" target="_blank" rel="noopener noreferrer">Visit my GitHub profile ↗</a></div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2 class="heading">Let’s connect</h2>
+    <div class="contactgrid">
+      <a class="contact" href="mailto:mrinmoyeedas28@gmail.com"><span class="contacticon">@</span><span><small>Email</small>mrinmoyeedas28@gmail.com</span></a>
+      <a class="contact" href="tel:7002422873"><span class="contacticon">☎</span><span><small>Phone (work)</small>7002422873</span></a>
+      <a class="contact" href="https://www.linkedin.com/in/mrinmoyeedas98" target="_blank" rel="noopener noreferrer"><span class="contacticon">in</span><span><small>LinkedIn</small>linkedin.com/in/mrinmoyeedas98</span></a>
+      <div class="contact"><span class="contacticon">⌖</span><span><small>Location</small>Mumbai, Maharashtra, India</span></div>
+    </div>
+    <p class="meta" style="margin-top:14px">The source profile also lists Bengaluru, Karnataka under contact details.</p>
+  </section>
+</main>
+<footer>Personal profile of Mrinmoyee Das · Designed with a Zomato-inspired red-and-white look</footer>
+<button class="top" id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+const form=document.getElementById('searchForm'),input=document.getElementById('searchInput'),sections=[...document.querySelectorAll('.searchable')];
+function searchPage(query){const q=query.trim().toLowerCase();sections.forEach(section=>{const text=(section.innerText+' '+(section.dataset.search||'')).toLowerCase();section.classList.toggle('hidden',Boolean(q)&&!text.includes(q));});if(q){const first=sections.find(section=>!section.classList.contains('hidden'));if(first)first.scrollIntoView({behavior:'smooth',block:'start'});}else sections.forEach(section=>section.classList.remove('hidden'));}
+form.addEventListener('submit',e=>{e.preventDefault();searchPage(input.value)});input.addEventListener('input',()=>{if(!input.value.trim())searchPage('')});document.getElementById('backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
